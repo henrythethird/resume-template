@@ -1,16 +1,19 @@
 <template>
   <div id="app">
-    <Navigation/>
+    <Side class="nav" />
+    <Main class="main" :name="'Long Johnson'"/>
   </div>
 </template>
 
 <script>
-import Navigation from "./components/Navigation";
+import Side from "./components/side/Side";
+import Main from "./components/main/Main";
 
 export default {
   name: "App",
   components: {
-    Navigation
+    Side,
+    Main
   }
 };
 </script>
@@ -18,11 +21,27 @@ export default {
 <style>
   #app { 
     height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: stretch;
   }
-  
+
   html, body {
+    height: 100%;
+  }
+
+  * {
+    font-family: Arial, sans-serif;
+    font-size: inherit;
     padding: 0;
     margin: 0;
-    height: 100%;
+  }
+
+  .nav {
+    flex-basis: 300px;
+  }
+
+  .main {
+    flex: 1;
   }
 </style>
