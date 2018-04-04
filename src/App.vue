@@ -1,28 +1,46 @@
 <template>
   <div id="app">
-    <Navigation/>
+    <Side class="nav" />
+    <Main class="main" :name="'Long Johnson'"/>
   </div>
 </template>
 
 <script>
-import Navigation from "./components/Navigation";
+import Side from "./components/side/Side";
+import Main from "./components/main/Main";
 
 export default {
   name: "App",
   components: {
-    Navigation
+    Side,
+    Main
   }
 };
 </script>
 
 <style>
   #app { 
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+  }
+
+  html, body {
     height: 100%;
   }
-  
-  html, body {
+
+  * {
+    font-family: Arial, sans-serif;
+    font-size: inherit;
     padding: 0;
     margin: 0;
-    height: 100%;
+  }
+
+  .nav {
+    flex-basis: 300px;
+  }
+
+  .main {
+    flex: 1;
   }
 </style>
