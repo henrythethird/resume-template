@@ -1,20 +1,28 @@
 <template>
   <div id="app">
-    <HelloWorld/>
+    <Navigation/>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+import Navigation from "./components/Navigation";
 
 export default {
   name: "App",
   components: {
-    HelloWorld
+    Navigation
   }
 };
 </script>
 
 <style>
-  #app { color: black; }
+  #app { 
+    height: 100%;
+  }
+  
+  html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
 </style>
