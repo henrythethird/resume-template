@@ -19,10 +19,9 @@ export default {
 </script>
 
 <style>
-  #app { 
-    height: 100%;
+  #app {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: stretch;
   }
 
